@@ -1,0 +1,11 @@
+parameters:
+    level: 8
+    paths:
+        - challenges/session-01/src
+    excludePaths:
+        - challenges/session-01/tests
+    ignoreErrors:
+        - '#Call to an undefined method#'
+    checkMissingIterableValueType: false
+    checkGenericClassInNonGenericObjectType: false
+    reportUnmatchedIgnoredErrors: false

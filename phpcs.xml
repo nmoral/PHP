@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<ruleset name="PHP Architecture Training">
+    <description>Coding standard for PHP Architecture Training challenges</description>
+    
+    <!-- Include the whole project -->
+    <file>challenges/session-01/src</file>
+    
+    <!-- Exclude tests and vendor -->
+    <exclude-pattern>*/tests/*</exclude-pattern>
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    
+    <!-- Use PSR-12 standard -->
+    <rule ref="PSR12"/>
+    
+    <!-- Additional rules -->
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="120"/>
+            <property name="absoluteLineLimit" value="140"/>
+        </properties>
+    </rule>
+    
+    <!-- Disable some rules for training purposes -->
+    <rule ref="PSR12.Classes.ClassInstantiation">
+        <severity>0</severity>
+    </rule>
+</ruleset>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.0/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         cacheDirectory=".phpunit.cache"
+         executionOrder="depends,defects"
+         requireCoverageMetadata="true"
+         beStrictAboutCoverageMetadata="true"
+         beStrictAboutOutputDuringTests="true"
+         failOnRisky="true"
+         failOnWarning="true">
+    
+    <testsuites>
+        <testsuite name="Session 01 - Refactoring">
+            <directory>challenges/session-01/tests</directory>
+        </testsuite>
+    </testsuites>
+    
+    <coverage processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">challenges/session-01/src</directory>
+        </include>
+        <exclude>
+            <directory>challenges/session-01/tests</directory>
+            <file>challenges/session-01/src/UserManager.php</file>
+        </exclude>
+        <report>
+            <html outputDirectory="coverage"/>
+            <text outputFile="coverage.txt"/>
+            <clover outputFile="coverage.xml"/>
+        </report>
+    </coverage>
+    
+    <php>
+        <ini name="memory_limit" value="512M"/>
+        <ini name="error_reporting" value="-1"/>
+        <ini name="display_errors" value="1"/>
+        <ini name="display_startup_errors" value="1"/>
+    </php>
+    
+    <logging>
+        <junit outputFile="test-results.xml"/>
+    </logging>
+</phpunit>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="UserManagerTest" file="/app/challenges/session-01/tests/UserManagerTest.php" tests="6" assertions="0" errors="6" failures="0" skipped="0" time="0.000000">
+    <testcase name="testCreateUserSuccess" file="/app/challenges/session-01/tests/UserManagerTest.php" line="42" class="UserManagerTest" classname="UserManagerTest" assertions="0" time="0.000000">
+      <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">UserManagerTest::testCreateUserSuccess
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "UserValidator" does not exist
+
+/app/challenges/session-01/tests/UserManagerTest.php:23</error>
+    </testcase>
+    <testcase name="testCreateUserValidationFailed" file="/app/challenges/session-01/tests/UserManagerTest.php" line="98" class="UserManagerTest" classname="UserManagerTest" assertions="0" time="0.000000">
+      <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">UserManagerTest::testCreateUserValidationFailed
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "UserValidator" does not exist
+
+/app/challenges/session-01/tests/UserManagerTest.php:23</error>
+    </testcase>
+    <testcase name="testUpdateUserSuccess" file="/app/challenges/session-01/tests/UserManagerTest.php" line="122" class="UserManagerTest" classname="UserManagerTest" assertions="0" time="0.000000">
+      <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">UserManagerTest::testUpdateUserSuccess
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "UserValidator" does not exist
+
+/app/challenges/session-01/tests/UserManagerTest.php:23</error>
+    </testcase>
+    <testcase name="testDeleteUserSuccess" file="/app/challenges/session-01/tests/UserManagerTest.php" line="164" class="UserManagerTest" classname="UserManagerTest" assertions="0" time="0.000000">
+      <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">UserManagerTest::testDeleteUserSuccess
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "UserValidator" does not exist
+
+/app/challenges/session-01/tests/UserManagerTest.php:23</error>
+    </testcase>
+    <testcase name="testCreateUserDatabaseError" file="/app/challenges/session-01/tests/UserManagerTest.php" line="190" class="UserManagerTest" classname="UserManagerTest" assertions="0" time="0.000000">
+      <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">UserManagerTest::testCreateUserDatabaseError
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "UserValidator" does not exist
+
+/app/challenges/session-01/tests/UserManagerTest.php:23</error>
+    </testcase>
+    <testcase name="testCreateUserEmailError" file="/app/challenges/session-01/tests/UserManagerTest.php" line="224" class="UserManagerTest" classname="UserManagerTest" assertions="0" time="0.000000">
+      <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">UserManagerTest::testCreateUserEmailError
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "UserValidator" does not exist
+
+/app/challenges/session-01/tests/UserManagerTest.php:23</error>
+    </testcase>
+  </testsuite>
+</testsuites>

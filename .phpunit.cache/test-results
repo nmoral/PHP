@@ -1,0 +1,1 @@
+{"version":2,"defects":{"UserManagerTest::testCreateUserSuccess":8,"UserManagerTest::testCreateUserValidationFailed":8,"UserManagerTest::testUpdateUserSuccess":8,"UserManagerTest::testDeleteUserSuccess":8,"UserManagerTest::testCreateUserDatabaseError":8,"UserManagerTest::testCreateUserEmailError":8},"times":[]}
