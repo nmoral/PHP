@@ -1,11 +1,13 @@
 parameters:
     level: 8
     paths:
+        - challenges/session-00/src
         - challenges/session-01/src
         - challenges/session-02/src
         - challenges/session-03/src
         - challenges/session-04/src
     excludePaths:
+        - challenges/session-00/tests
         - challenges/session-01/tests
         - challenges/session-02/tests
         - challenges/session-03/tests

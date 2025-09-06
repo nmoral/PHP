@@ -3,6 +3,7 @@
     <description>Coding standard for PHP Architecture Training challenges</description>
     
     <!-- Include the whole project -->
+    <file>challenges/session-00/src</file>
     <file>challenges/session-01/src</file>
     <file>challenges/session-02/src</file>
     <file>challenges/session-03/src</file>

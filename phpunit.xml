@@ -14,6 +14,9 @@
          failOnWarning="true">
     
     <testsuites>
+        <testsuite name="Session 00 - Initiation aux Tests">
+            <directory>challenges/session-00/tests</directory>
+        </testsuite>
         <testsuite name="Session 01 - Refactoring">
             <directory>challenges/session-01/tests</directory>
         </testsuite>
@@ -30,12 +33,14 @@
     
     <coverage processUncoveredFiles="true">
         <include>
+            <directory suffix=".php">challenges/session-00/src</directory>
             <directory suffix=".php">challenges/session-01/src</directory>
             <directory suffix=".php">challenges/session-02/src</directory>
             <directory suffix=".php">challenges/session-03/src</directory>
             <directory suffix=".php">challenges/session-04/src</directory>
         </include>
         <exclude>
+            <directory>challenges/session-00/tests</directory>
             <directory>challenges/session-01/tests</directory>
             <directory>challenges/session-02/tests</directory>
             <directory>challenges/session-03/tests</directory>

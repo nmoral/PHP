@@ -1,92 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="/app/phpunit.xml" tests="14" assertions="0" errors="14" failures="0" skipped="0" time="0.000000">
-    <testsuite name="Session 04 - Strategy Pattern" tests="14" assertions="0" errors="14" failures="0" skipped="0" time="0.000000">
-      <testsuite name="Session04Tests\PricingServiceTest" file="/app/challenges/session-04/tests/PricingServiceTest.php" tests="14" assertions="0" errors="14" failures="0" skipped="0" time="0.000000">
-        <testcase name="testPercentageDiscountStrategy" file="/app/challenges/session-04/tests/PricingServiceTest.php" line="45" class="Session04Tests\PricingServiceTest" classname="Session04Tests.PricingServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">Session04Tests\PricingServiceTest::testPercentageDiscountStrategy
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "Session04\Logger" does not exist
-
-/app/challenges/session-04/tests/PricingServiceTest.php:34</error>
-        </testcase>
-        <testcase name="testFixedDiscountStrategy" file="/app/challenges/session-04/tests/PricingServiceTest.php" line="65" class="Session04Tests\PricingServiceTest" classname="Session04Tests.PricingServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">Session04Tests\PricingServiceTest::testFixedDiscountStrategy
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "Session04\Logger" does not exist
-
-/app/challenges/session-04/tests/PricingServiceTest.php:34</error>
-        </testcase>
-        <testcase name="testVolumeDiscountStrategy" file="/app/challenges/session-04/tests/PricingServiceTest.php" line="85" class="Session04Tests\PricingServiceTest" classname="Session04Tests.PricingServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">Session04Tests\PricingServiceTest::testVolumeDiscountStrategy
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "Session04\Logger" does not exist
-
-/app/challenges/session-04/tests/PricingServiceTest.php:34</error>
-        </testcase>
-        <testcase name="testBulkDiscountStrategy" file="/app/challenges/session-04/tests/PricingServiceTest.php" line="111" class="Session04Tests\PricingServiceTest" classname="Session04Tests.PricingServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">Session04Tests\PricingServiceTest::testBulkDiscountStrategy
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "Session04\Logger" does not exist
-
-/app/challenges/session-04/tests/PricingServiceTest.php:34</error>
-        </testcase>
-        <testcase name="testSeasonalDiscountStrategy" file="/app/challenges/session-04/tests/PricingServiceTest.php" line="136" class="Session04Tests\PricingServiceTest" classname="Session04Tests.PricingServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">Session04Tests\PricingServiceTest::testSeasonalDiscountStrategy
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "Session04\Logger" does not exist
-
-/app/challenges/session-04/tests/PricingServiceTest.php:34</error>
-        </testcase>
-        <testcase name="testPricingServiceWithPercentageStrategy" file="/app/challenges/session-04/tests/PricingServiceTest.php" line="176" class="Session04Tests\PricingServiceTest" classname="Session04Tests.PricingServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">Session04Tests\PricingServiceTest::testPricingServiceWithPercentageStrategy
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "Session04\Logger" does not exist
-
-/app/challenges/session-04/tests/PricingServiceTest.php:34</error>
-        </testcase>
-        <testcase name="testPricingServiceWithFixedStrategy" file="/app/challenges/session-04/tests/PricingServiceTest.php" line="194" class="Session04Tests\PricingServiceTest" classname="Session04Tests.PricingServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">Session04Tests\PricingServiceTest::testPricingServiceWithFixedStrategy
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "Session04\Logger" does not exist
-
-/app/challenges/session-04/tests/PricingServiceTest.php:34</error>
-        </testcase>
-        <testcase name="testPricingServiceWithVolumeStrategy" file="/app/challenges/session-04/tests/PricingServiceTest.php" line="212" class="Session04Tests\PricingServiceTest" classname="Session04Tests.PricingServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">Session04Tests\PricingServiceTest::testPricingServiceWithVolumeStrategy
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "Session04\Logger" does not exist
-
-/app/challenges/session-04/tests/PricingServiceTest.php:34</error>
-        </testcase>
-        <testcase name="testNegativePriceHandling" file="/app/challenges/session-04/tests/PricingServiceTest.php" line="234" class="Session04Tests\PricingServiceTest" classname="Session04Tests.PricingServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">Session04Tests\PricingServiceTest::testNegativePriceHandling
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "Session04\Logger" does not exist
-
-/app/challenges/session-04/tests/PricingServiceTest.php:34</error>
-        </testcase>
-        <testcase name="testZeroQuantityHandling" file="/app/challenges/session-04/tests/PricingServiceTest.php" line="251" class="Session04Tests\PricingServiceTest" classname="Session04Tests.PricingServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">Session04Tests\PricingServiceTest::testZeroQuantityHandling
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "Session04\Logger" does not exist
-
-/app/challenges/session-04/tests/PricingServiceTest.php:34</error>
-        </testcase>
-        <testcase name="testInvalidParametersHandling" file="/app/challenges/session-04/tests/PricingServiceTest.php" line="269" class="Session04Tests\PricingServiceTest" classname="Session04Tests.PricingServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">Session04Tests\PricingServiceTest::testInvalidParametersHandling
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "Session04\Logger" does not exist
-
-/app/challenges/session-04/tests/PricingServiceTest.php:34</error>
-        </testcase>
-        <testcase name="testStrategySwitching" file="/app/challenges/session-04/tests/PricingServiceTest.php" line="291" class="Session04Tests\PricingServiceTest" classname="Session04Tests.PricingServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">Session04Tests\PricingServiceTest::testStrategySwitching
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "Session04\Logger" does not exist
-
-/app/challenges/session-04/tests/PricingServiceTest.php:34</error>
-        </testcase>
-        <testcase name="testMultipleStrategiesCombination" file="/app/challenges/session-04/tests/PricingServiceTest.php" line="319" class="Session04Tests\PricingServiceTest" classname="Session04Tests.PricingServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">Session04Tests\PricingServiceTest::testMultipleStrategiesCombination
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "Session04\Logger" does not exist
-
-/app/challenges/session-04/tests/PricingServiceTest.php:34</error>
-        </testcase>
-        <testcase name="testGetCalculationStats" file="/app/challenges/session-04/tests/PricingServiceTest.php" line="347" class="Session04Tests\PricingServiceTest" classname="Session04Tests.PricingServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">Session04Tests\PricingServiceTest::testGetCalculationStats
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "Session04\Logger" does not exist
-
-/app/challenges/session-04/tests/PricingServiceTest.php:34</error>
-        </testcase>
+  <testsuite name="/app/phpunit.xml" tests="23" assertions="1" errors="0" failures="0" skipped="0" time="0.002424">
+    <testsuite name="Session 00 - Initiation aux Tests" tests="23" assertions="1" errors="0" failures="0" skipped="0" time="0.002424">
+      <testsuite name="Session00Tests\CalculatorTest" file="/app/challenges/session-00/tests/CalculatorTest.php" tests="23" assertions="1" errors="0" failures="0" skipped="0" time="0.002424">
+        <testcase name="testAddWithPositiveNumbers" file="/app/challenges/session-00/tests/CalculatorTest.php" line="47" class="Session00Tests\CalculatorTest" classname="Session00Tests.CalculatorTest" assertions="1" time="0.001185"/>
+        <testcase name="testAddWithNegativeNumbers" file="/app/challenges/session-00/tests/CalculatorTest.php" line="64" class="Session00Tests\CalculatorTest" classname="Session00Tests.CalculatorTest" assertions="0" time="0.000071"/>
+        <testcase name="testAddWithDecimalNumbers" file="/app/challenges/session-00/tests/CalculatorTest.php" line="75" class="Session00Tests\CalculatorTest" classname="Session00Tests.CalculatorTest" assertions="0" time="0.000054"/>
+        <testcase name="testAddWithZero" file="/app/challenges/session-00/tests/CalculatorTest.php" line="86" class="Session00Tests\CalculatorTest" classname="Session00Tests.CalculatorTest" assertions="0" time="0.000065"/>
+        <testcase name="testDivideWithValidNumbers" file="/app/challenges/session-00/tests/CalculatorTest.php" line="101" class="Session00Tests\CalculatorTest" classname="Session00Tests.CalculatorTest" assertions="0" time="0.000053"/>
+        <testcase name="testDivideByZeroThrowsException" file="/app/challenges/session-00/tests/CalculatorTest.php" line="112" class="Session00Tests\CalculatorTest" classname="Session00Tests.CalculatorTest" assertions="0" time="0.000056"/>
+        <testcase name="testDivideWithDecimalNumbers" file="/app/challenges/session-00/tests/CalculatorTest.php" line="125" class="Session00Tests\CalculatorTest" classname="Session00Tests.CalculatorTest" assertions="0" time="0.000053"/>
+        <testcase name="testCalculateDiscountWithValidValues" file="/app/challenges/session-00/tests/CalculatorTest.php" line="140" class="Session00Tests\CalculatorTest" classname="Session00Tests.CalculatorTest" assertions="0" time="0.000049"/>
+        <testcase name="testCalculateDiscountWithNegativePriceThrowsException" file="/app/challenges/session-00/tests/CalculatorTest.php" line="151" class="Session00Tests\CalculatorTest" classname="Session00Tests.CalculatorTest" assertions="0" time="0.000060"/>
+        <testcase name="testCalculateDiscountWithNegativeDiscountThrowsException" file="/app/challenges/session-00/tests/CalculatorTest.php" line="164" class="Session00Tests\CalculatorTest" classname="Session00Tests.CalculatorTest" assertions="0" time="0.000063"/>
+        <testcase name="testCalculateDiscountWithDiscountOver100ThrowsException" file="/app/challenges/session-00/tests/CalculatorTest.php" line="177" class="Session00Tests\CalculatorTest" classname="Session00Tests.CalculatorTest" assertions="0" time="0.000079"/>
+        <testcase name="testCalculateDiscountWithZeroDiscount" file="/app/challenges/session-00/tests/CalculatorTest.php" line="190" class="Session00Tests\CalculatorTest" classname="Session00Tests.CalculatorTest" assertions="0" time="0.000054"/>
+        <testcase name="testCalculateDiscountWithFullDiscount" file="/app/challenges/session-00/tests/CalculatorTest.php" line="201" class="Session00Tests\CalculatorTest" classname="Session00Tests.CalculatorTest" assertions="0" time="0.000055"/>
+        <testcase name="testCalculateAverageWithValidNumbers" file="/app/challenges/session-00/tests/CalculatorTest.php" line="216" class="Session00Tests\CalculatorTest" classname="Session00Tests.CalculatorTest" assertions="0" time="0.000054"/>
+        <testcase name="testCalculateAverageWithEmptyArrayThrowsException" file="/app/challenges/session-00/tests/CalculatorTest.php" line="227" class="Session00Tests\CalculatorTest" classname="Session00Tests.CalculatorTest" assertions="0" time="0.000059"/>
+        <testcase name="testFindMaxWithValidNumbers" file="/app/challenges/session-00/tests/CalculatorTest.php" line="240" class="Session00Tests\CalculatorTest" classname="Session00Tests.CalculatorTest" assertions="0" time="0.000051"/>
+        <testcase name="testFindMinWithValidNumbers" file="/app/challenges/session-00/tests/CalculatorTest.php" line="251" class="Session00Tests\CalculatorTest" classname="Session00Tests.CalculatorTest" assertions="0" time="0.000050"/>
+        <testcase name="testIsEvenWithEvenNumber" file="/app/challenges/session-00/tests/CalculatorTest.php" line="262" class="Session00Tests\CalculatorTest" classname="Session00Tests.CalculatorTest" assertions="0" time="0.000052"/>
+        <testcase name="testIsEvenWithOddNumber" file="/app/challenges/session-00/tests/CalculatorTest.php" line="273" class="Session00Tests\CalculatorTest" classname="Session00Tests.CalculatorTest" assertions="0" time="0.000053"/>
+        <testcase name="testIsPrimeWithPrimeNumber" file="/app/challenges/session-00/tests/CalculatorTest.php" line="284" class="Session00Tests\CalculatorTest" classname="Session00Tests.CalculatorTest" assertions="0" time="0.000050"/>
+        <testcase name="testIsPrimeWithNonPrimeNumber" file="/app/challenges/session-00/tests/CalculatorTest.php" line="295" class="Session00Tests\CalculatorTest" classname="Session00Tests.CalculatorTest" assertions="0" time="0.000050"/>
+        <testcase name="testFactorialWithValidNumber" file="/app/challenges/session-00/tests/CalculatorTest.php" line="306" class="Session00Tests\CalculatorTest" classname="Session00Tests.CalculatorTest" assertions="0" time="0.000053"/>
+        <testcase name="testFactorialWithNegativeNumberThrowsException" file="/app/challenges/session-00/tests/CalculatorTest.php" line="317" class="Session00Tests\CalculatorTest" classname="Session00Tests.CalculatorTest" assertions="0" time="0.000054"/>
       </testsuite>
     </testsuite>
   </testsuite>

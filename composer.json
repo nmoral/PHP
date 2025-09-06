@@ -22,6 +22,7 @@
     "autoload": {
         "psr-4": {
             "": "challenges/session-01/src/",
+            "Session00\\": "challenges/session-00/src/",
             "Session02\\": "challenges/session-02/src/",
             "Session03\\": "challenges/session-03/src/",
             "Session04\\": "challenges/session-04/src/"
@@ -30,6 +31,7 @@
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "challenges/session-01/tests/",
+            "Session00Tests\\": "challenges/session-00/tests/",
             "Session02Tests\\": "challenges/session-02/tests/",
             "Session03Tests\\": "challenges/session-03/tests/",
             "Session04Tests\\": "challenges/session-04/tests/"
@@ -39,8 +41,8 @@
         "test": "phpunit",
         "test-coverage": "phpunit --coverage-html coverage",
         "phpstan": "phpstan analyse",
-        "cs-check": "phpcs --standard=PSR12 challenges/session-01/src/ challenges/session-02/src/ challenges/session-03/src/ challenges/session-04/src/",
-        "cs-fix": "phpcbf --standard=PSR12 challenges/session-01/src/ challenges/session-02/src/ challenges/session-03/src/ challenges/session-04/src/",
+        "cs-check": "phpcs --standard=PSR12 challenges/session-00/src/ challenges/session-01/src/ challenges/session-02/src/ challenges/session-03/src/ challenges/session-04/src/",
+        "cs-fix": "phpcbf --standard=PSR12 challenges/session-00/src/ challenges/session-01/src/ challenges/session-02/src/ challenges/session-03/src/ challenges/session-04/src/",
         "quality": [
             "@cs-check",
             "@phpstan",
