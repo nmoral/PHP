@@ -6,6 +6,7 @@
     <file>challenges/session-01/src</file>
     <file>challenges/session-02/src</file>
     <file>challenges/session-03/src</file>
+    <file>challenges/session-04/src</file>
     
     <!-- Exclude tests and vendor -->
     <exclude-pattern>*/tests/*</exclude-pattern>

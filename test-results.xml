@@ -1,79 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="/app/phpunit.xml" tests="12" assertions="0" errors="12" failures="0" skipped="0" time="0.000000">
-    <testsuite name="Session 03 - Factory Pattern" tests="12" assertions="0" errors="12" failures="0" skipped="0" time="0.000000">
-      <testsuite name="NotificationServiceTest" file="/app/challenges/session-03/tests/NotificationServiceTest.php" tests="12" assertions="0" errors="12" failures="0" skipped="0" time="0.000000">
-        <testcase name="testSendEmailNotificationSuccess" file="/app/challenges/session-03/tests/NotificationServiceTest.php" line="33" class="NotificationServiceTest" classname="NotificationServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">NotificationServiceTest::testSendEmailNotificationSuccess
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "NotificationFactory" does not exist
+  <testsuite name="/app/phpunit.xml" tests="14" assertions="0" errors="14" failures="0" skipped="0" time="0.000000">
+    <testsuite name="Session 04 - Strategy Pattern" tests="14" assertions="0" errors="14" failures="0" skipped="0" time="0.000000">
+      <testsuite name="Session04Tests\PricingServiceTest" file="/app/challenges/session-04/tests/PricingServiceTest.php" tests="14" assertions="0" errors="14" failures="0" skipped="0" time="0.000000">
+        <testcase name="testPercentageDiscountStrategy" file="/app/challenges/session-04/tests/PricingServiceTest.php" line="45" class="Session04Tests\PricingServiceTest" classname="Session04Tests.PricingServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">Session04Tests\PricingServiceTest::testPercentageDiscountStrategy
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "Session04\Logger" does not exist
 
-/app/challenges/session-03/tests/NotificationServiceTest.php:20</error>
+/app/challenges/session-04/tests/PricingServiceTest.php:34</error>
         </testcase>
-        <testcase name="testSendSmsNotificationSuccess" file="/app/challenges/session-03/tests/NotificationServiceTest.php" line="85" class="NotificationServiceTest" classname="NotificationServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">NotificationServiceTest::testSendSmsNotificationSuccess
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "NotificationFactory" does not exist
+        <testcase name="testFixedDiscountStrategy" file="/app/challenges/session-04/tests/PricingServiceTest.php" line="65" class="Session04Tests\PricingServiceTest" classname="Session04Tests.PricingServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">Session04Tests\PricingServiceTest::testFixedDiscountStrategy
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "Session04\Logger" does not exist
 
-/app/challenges/session-03/tests/NotificationServiceTest.php:20</error>
+/app/challenges/session-04/tests/PricingServiceTest.php:34</error>
         </testcase>
-        <testcase name="testSendPushNotificationSuccess" file="/app/challenges/session-03/tests/NotificationServiceTest.php" line="118" class="NotificationServiceTest" classname="NotificationServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">NotificationServiceTest::testSendPushNotificationSuccess
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "NotificationFactory" does not exist
+        <testcase name="testVolumeDiscountStrategy" file="/app/challenges/session-04/tests/PricingServiceTest.php" line="85" class="Session04Tests\PricingServiceTest" classname="Session04Tests.PricingServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">Session04Tests\PricingServiceTest::testVolumeDiscountStrategy
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "Session04\Logger" does not exist
 
-/app/challenges/session-03/tests/NotificationServiceTest.php:20</error>
+/app/challenges/session-04/tests/PricingServiceTest.php:34</error>
         </testcase>
-        <testcase name="testSendSlackNotificationSuccess" file="/app/challenges/session-03/tests/NotificationServiceTest.php" line="152" class="NotificationServiceTest" classname="NotificationServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">NotificationServiceTest::testSendSlackNotificationSuccess
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "NotificationFactory" does not exist
+        <testcase name="testBulkDiscountStrategy" file="/app/challenges/session-04/tests/PricingServiceTest.php" line="111" class="Session04Tests\PricingServiceTest" classname="Session04Tests.PricingServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">Session04Tests\PricingServiceTest::testBulkDiscountStrategy
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "Session04\Logger" does not exist
 
-/app/challenges/session-03/tests/NotificationServiceTest.php:20</error>
+/app/challenges/session-04/tests/PricingServiceTest.php:34</error>
         </testcase>
-        <testcase name="testSendDiscordNotificationSuccess" file="/app/challenges/session-03/tests/NotificationServiceTest.php" line="186" class="NotificationServiceTest" classname="NotificationServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">NotificationServiceTest::testSendDiscordNotificationSuccess
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "NotificationFactory" does not exist
+        <testcase name="testSeasonalDiscountStrategy" file="/app/challenges/session-04/tests/PricingServiceTest.php" line="136" class="Session04Tests\PricingServiceTest" classname="Session04Tests.PricingServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">Session04Tests\PricingServiceTest::testSeasonalDiscountStrategy
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "Session04\Logger" does not exist
 
-/app/challenges/session-03/tests/NotificationServiceTest.php:20</error>
+/app/challenges/session-04/tests/PricingServiceTest.php:34</error>
         </testcase>
-        <testcase name="testSendNotificationFailure" file="/app/challenges/session-03/tests/NotificationServiceTest.php" line="220" class="NotificationServiceTest" classname="NotificationServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">NotificationServiceTest::testSendNotificationFailure
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "NotificationFactory" does not exist
+        <testcase name="testPricingServiceWithPercentageStrategy" file="/app/challenges/session-04/tests/PricingServiceTest.php" line="176" class="Session04Tests\PricingServiceTest" classname="Session04Tests.PricingServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">Session04Tests\PricingServiceTest::testPricingServiceWithPercentageStrategy
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "Session04\Logger" does not exist
 
-/app/challenges/session-03/tests/NotificationServiceTest.php:20</error>
+/app/challenges/session-04/tests/PricingServiceTest.php:34</error>
         </testcase>
-        <testcase name="testSendNotificationFactoryException" file="/app/challenges/session-03/tests/NotificationServiceTest.php" line="262" class="NotificationServiceTest" classname="NotificationServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">NotificationServiceTest::testSendNotificationFactoryException
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "NotificationFactory" does not exist
+        <testcase name="testPricingServiceWithFixedStrategy" file="/app/challenges/session-04/tests/PricingServiceTest.php" line="194" class="Session04Tests\PricingServiceTest" classname="Session04Tests.PricingServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">Session04Tests\PricingServiceTest::testPricingServiceWithFixedStrategy
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "Session04\Logger" does not exist
 
-/app/challenges/session-03/tests/NotificationServiceTest.php:20</error>
+/app/challenges/session-04/tests/PricingServiceTest.php:34</error>
         </testcase>
-        <testcase name="testSendBulkNotification" file="/app/challenges/session-03/tests/NotificationServiceTest.php" line="296" class="NotificationServiceTest" classname="NotificationServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">NotificationServiceTest::testSendBulkNotification
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "NotificationFactory" does not exist
+        <testcase name="testPricingServiceWithVolumeStrategy" file="/app/challenges/session-04/tests/PricingServiceTest.php" line="212" class="Session04Tests\PricingServiceTest" classname="Session04Tests.PricingServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">Session04Tests\PricingServiceTest::testPricingServiceWithVolumeStrategy
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "Session04\Logger" does not exist
 
-/app/challenges/session-03/tests/NotificationServiceTest.php:20</error>
+/app/challenges/session-04/tests/PricingServiceTest.php:34</error>
         </testcase>
-        <testcase name="testSendNotificationWithRetry" file="/app/challenges/session-03/tests/NotificationServiceTest.php" line="330" class="NotificationServiceTest" classname="NotificationServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">NotificationServiceTest::testSendNotificationWithRetry
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "NotificationFactory" does not exist
+        <testcase name="testNegativePriceHandling" file="/app/challenges/session-04/tests/PricingServiceTest.php" line="234" class="Session04Tests\PricingServiceTest" classname="Session04Tests.PricingServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">Session04Tests\PricingServiceTest::testNegativePriceHandling
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "Session04\Logger" does not exist
 
-/app/challenges/session-03/tests/NotificationServiceTest.php:20</error>
+/app/challenges/session-04/tests/PricingServiceTest.php:34</error>
         </testcase>
-        <testcase name="testSendNotificationWithRetryFailure" file="/app/challenges/session-03/tests/NotificationServiceTest.php" line="363" class="NotificationServiceTest" classname="NotificationServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">NotificationServiceTest::testSendNotificationWithRetryFailure
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "NotificationFactory" does not exist
+        <testcase name="testZeroQuantityHandling" file="/app/challenges/session-04/tests/PricingServiceTest.php" line="251" class="Session04Tests\PricingServiceTest" classname="Session04Tests.PricingServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">Session04Tests\PricingServiceTest::testZeroQuantityHandling
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "Session04\Logger" does not exist
 
-/app/challenges/session-03/tests/NotificationServiceTest.php:20</error>
+/app/challenges/session-04/tests/PricingServiceTest.php:34</error>
         </testcase>
-        <testcase name="testSendNotificationWithRetryException" file="/app/challenges/session-03/tests/NotificationServiceTest.php" line="396" class="NotificationServiceTest" classname="NotificationServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">NotificationServiceTest::testSendNotificationWithRetryException
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "NotificationFactory" does not exist
+        <testcase name="testInvalidParametersHandling" file="/app/challenges/session-04/tests/PricingServiceTest.php" line="269" class="Session04Tests\PricingServiceTest" classname="Session04Tests.PricingServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">Session04Tests\PricingServiceTest::testInvalidParametersHandling
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "Session04\Logger" does not exist
 
-/app/challenges/session-03/tests/NotificationServiceTest.php:20</error>
+/app/challenges/session-04/tests/PricingServiceTest.php:34</error>
         </testcase>
-        <testcase name="testGetNotificationStats" file="/app/challenges/session-03/tests/NotificationServiceTest.php" line="429" class="NotificationServiceTest" classname="NotificationServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">NotificationServiceTest::testGetNotificationStats
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "NotificationFactory" does not exist
+        <testcase name="testStrategySwitching" file="/app/challenges/session-04/tests/PricingServiceTest.php" line="291" class="Session04Tests\PricingServiceTest" classname="Session04Tests.PricingServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">Session04Tests\PricingServiceTest::testStrategySwitching
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "Session04\Logger" does not exist
 
-/app/challenges/session-03/tests/NotificationServiceTest.php:20</error>
+/app/challenges/session-04/tests/PricingServiceTest.php:34</error>
+        </testcase>
+        <testcase name="testMultipleStrategiesCombination" file="/app/challenges/session-04/tests/PricingServiceTest.php" line="319" class="Session04Tests\PricingServiceTest" classname="Session04Tests.PricingServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">Session04Tests\PricingServiceTest::testMultipleStrategiesCombination
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "Session04\Logger" does not exist
+
+/app/challenges/session-04/tests/PricingServiceTest.php:34</error>
+        </testcase>
+        <testcase name="testGetCalculationStats" file="/app/challenges/session-04/tests/PricingServiceTest.php" line="347" class="Session04Tests\PricingServiceTest" classname="Session04Tests.PricingServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">Session04Tests\PricingServiceTest::testGetCalculationStats
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "Session04\Logger" does not exist
+
+/app/challenges/session-04/tests/PricingServiceTest.php:34</error>
         </testcase>
       </testsuite>
     </testsuite>

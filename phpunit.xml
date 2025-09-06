@@ -23,6 +23,9 @@
         <testsuite name="Session 03 - Factory Pattern">
             <directory>challenges/session-03/tests</directory>
         </testsuite>
+        <testsuite name="Session 04 - Strategy Pattern">
+            <directory>challenges/session-04/tests</directory>
+        </testsuite>
     </testsuites>
     
     <coverage processUncoveredFiles="true">
@@ -30,14 +33,17 @@
             <directory suffix=".php">challenges/session-01/src</directory>
             <directory suffix=".php">challenges/session-02/src</directory>
             <directory suffix=".php">challenges/session-03/src</directory>
+            <directory suffix=".php">challenges/session-04/src</directory>
         </include>
         <exclude>
             <directory>challenges/session-01/tests</directory>
             <directory>challenges/session-02/tests</directory>
             <directory>challenges/session-03/tests</directory>
+            <directory>challenges/session-04/tests</directory>
             <file>challenges/session-01/src/UserManager.php</file>
             <file>challenges/session-02/src/OrderService.php</file>
             <file>challenges/session-03/src/NotificationService.php</file>
+            <file>challenges/session-04/src/PricingService.php</file>
         </exclude>
         <report>
             <html outputDirectory="coverage"/>

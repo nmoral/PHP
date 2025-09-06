@@ -4,10 +4,12 @@ parameters:
         - challenges/session-01/src
         - challenges/session-02/src
         - challenges/session-03/src
+        - challenges/session-04/src
     excludePaths:
         - challenges/session-01/tests
         - challenges/session-02/tests
         - challenges/session-03/tests
+        - challenges/session-04/tests
     ignoreErrors:
         - '#Call to an undefined method#'
     checkMissingIterableValueType: false
