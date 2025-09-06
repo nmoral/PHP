@@ -1,0 +1,324 @@
+# Cursor Rules - Programme de Formation Architecture PHP
+
+## 🎯 Vue d'ensemble du projet
+
+Ce projet est un programme de formation pour développeurs PHP axé sur l'architecture logicielle. Il utilise des sessions de 2h avec des challenges pratiques où les développeurs écrivent du code de production pour faire passer des tests unitaires pré-écrits.
+
+## 📁 Structure du projet
+
+```
+PHP/
+├── challenges/
+│   ├── session-00/          # Initiation aux Tests Unitaires
+│   ├── session-01/          # Refactoring (SRP)
+│   ├── session-02/          # Dependency Injection
+│   ├── session-03/          # Factory Pattern
+│   ├── session-04/          # Strategy Pattern
+│   └── session-XX/          # Nouvelles sessions
+├── composer.json            # Configuration PHP et dépendances
+├── phpunit.xml             # Configuration PHPUnit
+├── phpstan.neon            # Configuration PHPStan
+├── phpcs.xml               # Configuration PHP CodeSniffer
+├── docker-compose.yml      # Environnement Docker
+├── Dockerfile              # Image Docker PHP
+└── README.md               # Documentation principale
+```
+
+## 🏗️ Conventions pour les nouvelles sessions
+
+### Nommage des sessions
+- **Format** : `session-XX` où XX est un numéro à 2 chiffres (00, 01, 02, etc.)
+- **Ordre** : Session 00 = Initiation aux tests, puis sessions d'architecture
+- **Exemple** : `session-05`, `session-06`, etc.
+
+### Structure d'une session
+```
+challenges/session-XX/
+├── README.md               # Documentation complète de la session
+├── src/                    # Code source (classes problématiques)
+│   └── [ClassePrincipale].php
+└── tests/                  # Tests unitaires guidants
+    └── [ClassePrincipale]Test.php
+```
+
+### Conventions de nommage des classes
+- **Namespace source** : `SessionXX\` (ex: `Session05\`)
+- **Namespace tests** : `SessionXXTests\` (ex: `Session05Tests\`)
+- **Classes principales** : Nom descriptif du pattern/concept (ex: `UserRepository`, `PaymentService`)
+- **Tests** : `[ClassePrincipale]Test` (ex: `UserRepositoryTest`)
+
+## 📝 Template de README pour nouvelle session
+
+```markdown
+# Session XX : [Nom du Pattern/Concept]
+
+## 🎯 Objectif de la Session
+[Description claire de l'objectif]
+
+## 📋 Problème à Résoudre
+
+### Code de Départ (Problématique)
+[Code avec problème architectural]
+
+### Problèmes Identifiés
+1. [Problème 1]
+2. [Problème 2]
+3. [Problème 3]
+
+## 🎯 Objectif du Refactoring
+
+### Solution Cible ([Pattern])
+[Code cible avec le pattern implémenté]
+
+## 🧪 Tests à Faire Passer
+[Liste des tests fournis]
+
+## 📚 Concepts Clés à Maîtriser
+[Concepts théoriques]
+
+## 🛠️ Procédure Détaillée pour les Développeurs
+[Étapes pas à pas]
+
+## 🎯 Résultats Attendus
+[Avant/Après]
+
+## 🚀 Application Immédiate
+[Utilisation dans les projets]
+
+## 📖 Ressources Complémentaires
+[Liens utiles]
+
+## 🎯 Défi Final
+[Objectif et contraintes]
+```
+
+## 🧪 Conventions pour les tests
+
+### Structure des tests
+- **1 test complet** comme exemple (sans TODO)
+- **Tests avec TODOs** pour guider l'implémentation
+- **Tests d'exceptions** avec `expectException()`
+- **Tests de cas limites** (valeurs nulles, négatives, extrêmes)
+- **Tests de flexibilité** (changement de comportement)
+
+### Nommage des méthodes de test
+- **Format** : `test[MethodName]With[Scenario]()`
+- **Exemples** :
+  - `testAddWithPositiveNumbers()`
+  - `testCalculateDiscountWithNegativePriceThrowsException()`
+  - `testSendEmailNotificationSuccess()`
+
+### Assertions recommandées
+- `assertEquals($expected, $actual)` - Égalité de valeur
+- `assertSame($expected, $actual)` - Identité (type + valeur)
+- `assertTrue($condition)` - Condition vraie
+- `assertFalse($condition)` - Condition fausse
+- `assertNull($value)` - Valeur nulle
+- `assertNotNull($value)` - Valeur non nulle
+- `expectException(ExceptionClass::class)` - Exception attendue
+
+## ⚙️ Configuration requise pour nouvelle session
+
+### 1. Mise à jour composer.json
+```json
+"autoload": {
+    "psr-4": {
+        "SessionXX\\": "challenges/session-XX/src/"
+    }
+},
+"autoload-dev": {
+    "psr-4": {
+        "SessionXXTests\\": "challenges/session-XX/tests/"
+    }
+},
+"scripts": {
+    "cs-check": "phpcs --standard=PSR12 ... challenges/session-XX/src/",
+    "cs-fix": "phpcbf --standard=PSR12 ... challenges/session-XX/src/"
+}
+```
+
+### 2. Mise à jour phpunit.xml
+```xml
+<testsuites>
+    <testsuite name="Session XX - [Nom du Pattern]">
+        <directory>challenges/session-XX/tests</directory>
+    </testsuite>
+</testsuites>
+
+<coverage>
+    <include>
+        <directory suffix=".php">challenges/session-XX/src</directory>
+    </include>
+    <exclude>
+        <directory>challenges/session-XX/tests</directory>
+        <file>challenges/session-XX/src/[ClasseProblematique].php</file>
+    </exclude>
+</coverage>
+```
+
+### 3. Mise à jour phpstan.neon
+```yaml
+parameters:
+    paths:
+        - challenges/session-XX/src
+    excludePaths:
+        - challenges/session-XX/tests
+```
+
+### 4. Mise à jour phpcs.xml
+```xml
+<file>challenges/session-XX/src</file>
+```
+
+## 🎯 Patterns et concepts couverts
+
+### Sessions existantes
+- **Session 00** : Initiation aux Tests Unitaires
+- **Session 01** : Refactoring (Single Responsibility Principle)
+- **Session 02** : Dependency Injection / Inversion of Control
+- **Session 03** : Factory Pattern
+- **Session 04** : Strategy Pattern
+
+### Sessions à venir (selon le plan)
+- **Session 05** : Repository Pattern
+- **Session 06** : Service Layer Pattern
+- **Session 07** : DTOs (Data Transfer Objects)
+- **Session 08** : Command Pattern
+- **Session 09** : Observer Pattern
+- **Session 10** : Decorator Pattern
+- **Session 11** : Adapter Pattern
+- **Session 12** : Facade Pattern
+- **Session 13** : CQRS (Command Query Responsibility Segregation)
+- **Session 14** : Event Sourcing
+- **Session 15** : Hexagonal Architecture
+- **Session 16** : Microservices Architecture
+
+## 🚀 Procédure pour ajouter une nouvelle session
+
+### 1. Créer la structure
+```bash
+mkdir -p challenges/session-XX/src
+mkdir -p challenges/session-XX/tests
+```
+
+### 2. Créer les fichiers
+- `challenges/session-XX/README.md` (copier le template)
+- `challenges/session-XX/src/[ClassePrincipale].php` (code problématique)
+- `challenges/session-XX/tests/[ClassePrincipale]Test.php` (tests guidants)
+
+### 3. Mettre à jour la configuration
+- `composer.json` (autoload, scripts)
+- `phpunit.xml` (testsuite, coverage)
+- `phpstan.neon` (paths)
+- `phpcs.xml` (files)
+
+### 4. Tester l'environnement
+```bash
+docker compose exec php bash -c "composer dump-autoload"
+docker compose exec php bash -c "./vendor/bin/phpunit --list-suites"
+docker compose exec php bash -c "./vendor/bin/phpunit --testsuite='Session XX - [Nom]'"
+```
+
+### 5. Commit
+```bash
+git add .
+git commit -m "feat: Session XX - [Nom du Pattern]
+
+- Ajout du challenge Session XX : [Description]
+- Problème : [Description du problème]
+- Objectif : [Description de l'objectif]
+- Tests unitaires complets avec mocks pour guider l'implémentation
+- Configuration mise à jour : composer.json, phpunit.xml, phpstan.neon, phpcs.xml
+- Documentation détaillée avec procédure pour les développeurs
+- Exemples concrets : [Liste des exemples]
+
+Les développeurs doivent :
+1. [Étape 1]
+2. [Étape 2]
+3. [Étape 3]
+4. [Étape 4]
+5. [Étape 5]"
+```
+
+## 🎯 Principes pédagogiques
+
+### Approche progressive
+- **Session 00** : Fondamentaux des tests
+- **Sessions 01-04** : Patterns de base
+- **Sessions 05-08** : Architecture en couches
+- **Sessions 09-12** : Patterns avancés
+- **Sessions 13-16** : Architecture moderne
+
+### Méthode d'apprentissage
+1. **Problème concret** : Code avec problème architectural
+2. **Tests guidants** : Tests qui échouent et guident vers la solution
+3. **Solution progressive** : Implémentation étape par étape
+4. **Application immédiate** : Utilisation dans les projets réels
+5. **Quick wins** : Bénéfices immédiats
+
+### Qualité du code
+- **PSR-12** : Standards de codage PHP
+- **PHPStan level 8** : Analyse statique stricte
+- **Tests unitaires** : Couverture de code
+- **Documentation** : README détaillé pour chaque session
+
+## 🔧 Environnement technique
+
+### Docker
+- **Base** : `php:8.1-fpm-alpine`
+- **Extensions** : pdo, pdo_sqlite, zip
+- **Outils** : Composer, Git
+
+### Dépendances PHP
+- **PHPUnit 10** : Framework de tests
+- **Mockery** : Création de mocks
+- **PHPStan** : Analyse statique
+- **PHP CodeSniffer** : Standards de code
+- **PHP CS Fixer** : Correction automatique
+
+### Commandes utiles
+```bash
+# Tests
+docker compose exec php bash -c "./vendor/bin/phpunit"
+docker compose exec php bash -c "./vendor/bin/phpunit --testsuite='Session XX'"
+
+# Qualité
+docker compose exec php bash -c "composer cs-check"
+docker compose exec php bash -c "composer cs-fix"
+docker compose exec php bash -c "composer phpstan"
+
+# Autoload
+docker compose exec php bash -c "composer dump-autoload"
+```
+
+## 📚 Ressources de référence
+
+### Documentation
+- [PHPUnit Documentation](https://phpunit.readthedocs.io/)
+- [PSR-12 Coding Standard](https://www.php-fig.org/psr/psr-12/)
+- [PHPStan Rules](https://phpstan.org/rules)
+
+### Patterns
+- [Refactoring Guru](https://refactoring.guru/)
+- [Design Patterns](https://en.wikipedia.org/wiki/Design_Patterns)
+- [SOLID Principles](https://en.wikipedia.org/wiki/SOLID)
+
+### Architecture
+- [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+- [Hexagonal Architecture](https://alistair.cockburn.us/hexagonal-architecture/)
+- [CQRS](https://martinfowler.com/bliki/CQRS.html)
+
+---
+
+## 🎯 Règles importantes à respecter
+
+1. **Ne jamais fournir le code de solution** - Les développeurs doivent l'écrire
+2. **Tests qui échouent au départ** - C'est normal et attendu
+3. **Documentation complète** - Chaque session doit être autonome
+4. **Exemples concrets** - Applicables immédiatement dans les projets
+5. **Progression logique** - Chaque session s'appuie sur les précédentes
+6. **Qualité du code** - Respecter PSR-12 et PHPStan level 8
+7. **Tests complets** - Couvrir tous les cas (succès, erreurs, limites)
+8. **Mocks comme objectif** - Les mocks sont la récompense du refactoring
+
+Ces règles garantissent la cohérence et la qualité du programme de formation.
