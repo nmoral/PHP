@@ -22,21 +22,23 @@
     "autoload": {
         "psr-4": {
             "": "challenges/session-01/src/",
-            "Session02\\": "challenges/session-02/src/"
+            "Session02\\": "challenges/session-02/src/",
+            "Session03\\": "challenges/session-03/src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "challenges/session-01/tests/",
-            "Session02Tests\\": "challenges/session-02/tests/"
+            "Session02Tests\\": "challenges/session-02/tests/",
+            "Session03Tests\\": "challenges/session-03/tests/"
         }
     },
     "scripts": {
         "test": "phpunit",
         "test-coverage": "phpunit --coverage-html coverage",
         "phpstan": "phpstan analyse",
-        "cs-check": "phpcs --standard=PSR12 challenges/session-01/src/ challenges/session-02/src/",
-        "cs-fix": "phpcbf --standard=PSR12 challenges/session-01/src/ challenges/session-02/src/",
+        "cs-check": "phpcs --standard=PSR12 challenges/session-01/src/ challenges/session-02/src/ challenges/session-03/src/",
+        "cs-fix": "phpcbf --standard=PSR12 challenges/session-01/src/ challenges/session-02/src/ challenges/session-03/src/",
         "quality": [
             "@cs-check",
             "@phpstan",

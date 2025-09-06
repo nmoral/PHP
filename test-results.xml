@@ -1,49 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="/app/phpunit.xml" tests="7" assertions="0" errors="7" failures="0" skipped="0" time="0.000000">
-    <testsuite name="Session 02 - Dependency Injection" tests="7" assertions="0" errors="7" failures="0" skipped="0" time="0.000000">
-      <testsuite name="OrderServiceTest" file="/app/challenges/session-02/tests/OrderServiceTest.php" tests="7" assertions="0" errors="7" failures="0" skipped="0" time="0.000000">
-        <testcase name="testProcessOrderSuccess" file="/app/challenges/session-02/tests/OrderServiceTest.php" line="39" class="OrderServiceTest" classname="OrderServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">OrderServiceTest::testProcessOrderSuccess
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "EmailServiceInterface" does not exist
+  <testsuite name="/app/phpunit.xml" tests="12" assertions="0" errors="12" failures="0" skipped="0" time="0.000000">
+    <testsuite name="Session 03 - Factory Pattern" tests="12" assertions="0" errors="12" failures="0" skipped="0" time="0.000000">
+      <testsuite name="NotificationServiceTest" file="/app/challenges/session-03/tests/NotificationServiceTest.php" tests="12" assertions="0" errors="12" failures="0" skipped="0" time="0.000000">
+        <testcase name="testSendEmailNotificationSuccess" file="/app/challenges/session-03/tests/NotificationServiceTest.php" line="33" class="NotificationServiceTest" classname="NotificationServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">NotificationServiceTest::testSendEmailNotificationSuccess
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "NotificationFactory" does not exist
 
-/app/challenges/session-02/tests/OrderServiceTest.php:22</error>
+/app/challenges/session-03/tests/NotificationServiceTest.php:20</error>
         </testcase>
-        <testcase name="testProcessOrderPaymentFailed" file="/app/challenges/session-02/tests/OrderServiceTest.php" line="117" class="OrderServiceTest" classname="OrderServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">OrderServiceTest::testProcessOrderPaymentFailed
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "EmailServiceInterface" does not exist
+        <testcase name="testSendSmsNotificationSuccess" file="/app/challenges/session-03/tests/NotificationServiceTest.php" line="85" class="NotificationServiceTest" classname="NotificationServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">NotificationServiceTest::testSendSmsNotificationSuccess
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "NotificationFactory" does not exist
 
-/app/challenges/session-02/tests/OrderServiceTest.php:22</error>
+/app/challenges/session-03/tests/NotificationServiceTest.php:20</error>
         </testcase>
-        <testcase name="testCancelOrderSuccess" file="/app/challenges/session-02/tests/OrderServiceTest.php" line="149" class="OrderServiceTest" classname="OrderServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">OrderServiceTest::testCancelOrderSuccess
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "EmailServiceInterface" does not exist
+        <testcase name="testSendPushNotificationSuccess" file="/app/challenges/session-03/tests/NotificationServiceTest.php" line="118" class="NotificationServiceTest" classname="NotificationServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">NotificationServiceTest::testSendPushNotificationSuccess
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "NotificationFactory" does not exist
 
-/app/challenges/session-02/tests/OrderServiceTest.php:22</error>
+/app/challenges/session-03/tests/NotificationServiceTest.php:20</error>
         </testcase>
-        <testcase name="testCancelOrderNotFound" file="/app/challenges/session-02/tests/OrderServiceTest.php" line="212" class="OrderServiceTest" classname="OrderServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">OrderServiceTest::testCancelOrderNotFound
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "EmailServiceInterface" does not exist
+        <testcase name="testSendSlackNotificationSuccess" file="/app/challenges/session-03/tests/NotificationServiceTest.php" line="152" class="NotificationServiceTest" classname="NotificationServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">NotificationServiceTest::testSendSlackNotificationSuccess
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "NotificationFactory" does not exist
 
-/app/challenges/session-02/tests/OrderServiceTest.php:22</error>
+/app/challenges/session-03/tests/NotificationServiceTest.php:20</error>
         </testcase>
-        <testcase name="testGetCustomerOrders" file="/app/challenges/session-02/tests/OrderServiceTest.php" line="238" class="OrderServiceTest" classname="OrderServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">OrderServiceTest::testGetCustomerOrders
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "EmailServiceInterface" does not exist
+        <testcase name="testSendDiscordNotificationSuccess" file="/app/challenges/session-03/tests/NotificationServiceTest.php" line="186" class="NotificationServiceTest" classname="NotificationServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">NotificationServiceTest::testSendDiscordNotificationSuccess
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "NotificationFactory" does not exist
 
-/app/challenges/session-02/tests/OrderServiceTest.php:22</error>
+/app/challenges/session-03/tests/NotificationServiceTest.php:20</error>
         </testcase>
-        <testcase name="testProcessOrderInvalidData" file="/app/challenges/session-02/tests/OrderServiceTest.php" line="266" class="OrderServiceTest" classname="OrderServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">OrderServiceTest::testProcessOrderInvalidData
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "EmailServiceInterface" does not exist
+        <testcase name="testSendNotificationFailure" file="/app/challenges/session-03/tests/NotificationServiceTest.php" line="220" class="NotificationServiceTest" classname="NotificationServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">NotificationServiceTest::testSendNotificationFailure
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "NotificationFactory" does not exist
 
-/app/challenges/session-02/tests/OrderServiceTest.php:22</error>
+/app/challenges/session-03/tests/NotificationServiceTest.php:20</error>
         </testcase>
-        <testcase name="testProcessOrderDatabaseError" file="/app/challenges/session-02/tests/OrderServiceTest.php" line="288" class="OrderServiceTest" classname="OrderServiceTest" assertions="0" time="0.000000">
-          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">OrderServiceTest::testProcessOrderDatabaseError
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "EmailServiceInterface" does not exist
+        <testcase name="testSendNotificationFactoryException" file="/app/challenges/session-03/tests/NotificationServiceTest.php" line="262" class="NotificationServiceTest" classname="NotificationServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">NotificationServiceTest::testSendNotificationFactoryException
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "NotificationFactory" does not exist
 
-/app/challenges/session-02/tests/OrderServiceTest.php:22</error>
+/app/challenges/session-03/tests/NotificationServiceTest.php:20</error>
+        </testcase>
+        <testcase name="testSendBulkNotification" file="/app/challenges/session-03/tests/NotificationServiceTest.php" line="296" class="NotificationServiceTest" classname="NotificationServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">NotificationServiceTest::testSendBulkNotification
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "NotificationFactory" does not exist
+
+/app/challenges/session-03/tests/NotificationServiceTest.php:20</error>
+        </testcase>
+        <testcase name="testSendNotificationWithRetry" file="/app/challenges/session-03/tests/NotificationServiceTest.php" line="330" class="NotificationServiceTest" classname="NotificationServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">NotificationServiceTest::testSendNotificationWithRetry
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "NotificationFactory" does not exist
+
+/app/challenges/session-03/tests/NotificationServiceTest.php:20</error>
+        </testcase>
+        <testcase name="testSendNotificationWithRetryFailure" file="/app/challenges/session-03/tests/NotificationServiceTest.php" line="363" class="NotificationServiceTest" classname="NotificationServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">NotificationServiceTest::testSendNotificationWithRetryFailure
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "NotificationFactory" does not exist
+
+/app/challenges/session-03/tests/NotificationServiceTest.php:20</error>
+        </testcase>
+        <testcase name="testSendNotificationWithRetryException" file="/app/challenges/session-03/tests/NotificationServiceTest.php" line="396" class="NotificationServiceTest" classname="NotificationServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">NotificationServiceTest::testSendNotificationWithRetryException
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "NotificationFactory" does not exist
+
+/app/challenges/session-03/tests/NotificationServiceTest.php:20</error>
+        </testcase>
+        <testcase name="testGetNotificationStats" file="/app/challenges/session-03/tests/NotificationServiceTest.php" line="429" class="NotificationServiceTest" classname="NotificationServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">NotificationServiceTest::testGetNotificationStats
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "NotificationFactory" does not exist
+
+/app/challenges/session-03/tests/NotificationServiceTest.php:20</error>
         </testcase>
       </testsuite>
     </testsuite>
