@@ -17,15 +17,21 @@
         <testsuite name="Session 01 - Refactoring">
             <directory>challenges/session-01/tests</directory>
         </testsuite>
+        <testsuite name="Session 02 - Dependency Injection">
+            <directory>challenges/session-02/tests</directory>
+        </testsuite>
     </testsuites>
     
     <coverage processUncoveredFiles="true">
         <include>
             <directory suffix=".php">challenges/session-01/src</directory>
+            <directory suffix=".php">challenges/session-02/src</directory>
         </include>
         <exclude>
             <directory>challenges/session-01/tests</directory>
+            <directory>challenges/session-02/tests</directory>
             <file>challenges/session-01/src/UserManager.php</file>
+            <file>challenges/session-02/src/OrderService.php</file>
         </exclude>
         <report>
             <html outputDirectory="coverage"/>

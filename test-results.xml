@@ -1,41 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="UserManagerTest" file="/app/challenges/session-01/tests/UserManagerTest.php" tests="6" assertions="0" errors="6" failures="0" skipped="0" time="0.000000">
-    <testcase name="testCreateUserSuccess" file="/app/challenges/session-01/tests/UserManagerTest.php" line="42" class="UserManagerTest" classname="UserManagerTest" assertions="0" time="0.000000">
-      <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">UserManagerTest::testCreateUserSuccess
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "UserValidator" does not exist
+  <testsuite name="/app/phpunit.xml" tests="7" assertions="0" errors="7" failures="0" skipped="0" time="0.000000">
+    <testsuite name="Session 02 - Dependency Injection" tests="7" assertions="0" errors="7" failures="0" skipped="0" time="0.000000">
+      <testsuite name="OrderServiceTest" file="/app/challenges/session-02/tests/OrderServiceTest.php" tests="7" assertions="0" errors="7" failures="0" skipped="0" time="0.000000">
+        <testcase name="testProcessOrderSuccess" file="/app/challenges/session-02/tests/OrderServiceTest.php" line="39" class="OrderServiceTest" classname="OrderServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">OrderServiceTest::testProcessOrderSuccess
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "EmailServiceInterface" does not exist
 
-/app/challenges/session-01/tests/UserManagerTest.php:23</error>
-    </testcase>
-    <testcase name="testCreateUserValidationFailed" file="/app/challenges/session-01/tests/UserManagerTest.php" line="98" class="UserManagerTest" classname="UserManagerTest" assertions="0" time="0.000000">
-      <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">UserManagerTest::testCreateUserValidationFailed
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "UserValidator" does not exist
+/app/challenges/session-02/tests/OrderServiceTest.php:22</error>
+        </testcase>
+        <testcase name="testProcessOrderPaymentFailed" file="/app/challenges/session-02/tests/OrderServiceTest.php" line="117" class="OrderServiceTest" classname="OrderServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">OrderServiceTest::testProcessOrderPaymentFailed
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "EmailServiceInterface" does not exist
 
-/app/challenges/session-01/tests/UserManagerTest.php:23</error>
-    </testcase>
-    <testcase name="testUpdateUserSuccess" file="/app/challenges/session-01/tests/UserManagerTest.php" line="122" class="UserManagerTest" classname="UserManagerTest" assertions="0" time="0.000000">
-      <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">UserManagerTest::testUpdateUserSuccess
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "UserValidator" does not exist
+/app/challenges/session-02/tests/OrderServiceTest.php:22</error>
+        </testcase>
+        <testcase name="testCancelOrderSuccess" file="/app/challenges/session-02/tests/OrderServiceTest.php" line="149" class="OrderServiceTest" classname="OrderServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">OrderServiceTest::testCancelOrderSuccess
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "EmailServiceInterface" does not exist
 
-/app/challenges/session-01/tests/UserManagerTest.php:23</error>
-    </testcase>
-    <testcase name="testDeleteUserSuccess" file="/app/challenges/session-01/tests/UserManagerTest.php" line="164" class="UserManagerTest" classname="UserManagerTest" assertions="0" time="0.000000">
-      <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">UserManagerTest::testDeleteUserSuccess
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "UserValidator" does not exist
+/app/challenges/session-02/tests/OrderServiceTest.php:22</error>
+        </testcase>
+        <testcase name="testCancelOrderNotFound" file="/app/challenges/session-02/tests/OrderServiceTest.php" line="212" class="OrderServiceTest" classname="OrderServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">OrderServiceTest::testCancelOrderNotFound
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "EmailServiceInterface" does not exist
 
-/app/challenges/session-01/tests/UserManagerTest.php:23</error>
-    </testcase>
-    <testcase name="testCreateUserDatabaseError" file="/app/challenges/session-01/tests/UserManagerTest.php" line="190" class="UserManagerTest" classname="UserManagerTest" assertions="0" time="0.000000">
-      <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">UserManagerTest::testCreateUserDatabaseError
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "UserValidator" does not exist
+/app/challenges/session-02/tests/OrderServiceTest.php:22</error>
+        </testcase>
+        <testcase name="testGetCustomerOrders" file="/app/challenges/session-02/tests/OrderServiceTest.php" line="238" class="OrderServiceTest" classname="OrderServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">OrderServiceTest::testGetCustomerOrders
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "EmailServiceInterface" does not exist
 
-/app/challenges/session-01/tests/UserManagerTest.php:23</error>
-    </testcase>
-    <testcase name="testCreateUserEmailError" file="/app/challenges/session-01/tests/UserManagerTest.php" line="224" class="UserManagerTest" classname="UserManagerTest" assertions="0" time="0.000000">
-      <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">UserManagerTest::testCreateUserEmailError
-PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "UserValidator" does not exist
+/app/challenges/session-02/tests/OrderServiceTest.php:22</error>
+        </testcase>
+        <testcase name="testProcessOrderInvalidData" file="/app/challenges/session-02/tests/OrderServiceTest.php" line="266" class="OrderServiceTest" classname="OrderServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">OrderServiceTest::testProcessOrderInvalidData
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "EmailServiceInterface" does not exist
 
-/app/challenges/session-01/tests/UserManagerTest.php:23</error>
-    </testcase>
+/app/challenges/session-02/tests/OrderServiceTest.php:22</error>
+        </testcase>
+        <testcase name="testProcessOrderDatabaseError" file="/app/challenges/session-02/tests/OrderServiceTest.php" line="288" class="OrderServiceTest" classname="OrderServiceTest" assertions="0" time="0.000000">
+          <error type="PHPUnit\Framework\MockObject\Generator\UnknownTypeException">OrderServiceTest::testProcessOrderDatabaseError
+PHPUnit\Framework\MockObject\Generator\UnknownTypeException: Class or interface "EmailServiceInterface" does not exist
+
+/app/challenges/session-02/tests/OrderServiceTest.php:22</error>
+        </testcase>
+      </testsuite>
+    </testsuite>
   </testsuite>
 </testsuites>
