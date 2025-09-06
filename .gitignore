@@ -1,0 +1,60 @@
+# PHP
+/vendor/
+composer.lock
+.env
+.env.local
+.env.production
+.env.testing
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+storage/logs/
+
+# Cache
+cache/
+storage/cache/
+bootstrap/cache/
+
+# Tests
+/tests/_output/
+/tests/_support/_generated/
+coverage/
+.phpunit.result.cache
+
+# Build
+/build/
+/dist/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Database
+*.sqlite
+*.db
+
+# Node modules (if using frontend assets)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Documentation build
+/docs/build/
