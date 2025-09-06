@@ -37,6 +37,97 @@ Les tests unitaires sont déjà écrits dans `tests/OrderServiceTest.php`. Votre
 
 **Objectif :** 100% des tests doivent passer avec une couverture de code > 90%.
 
+## 📋 Procédure détaillée pour les développeurs
+
+### ⚠️ **IMPORTANT : Les mocks sont l'OBJECTIF, pas quelque chose à éliminer !**
+
+### **Étape 1 : Code de départ (problématique)**
+```php
+// OrderService.php - AVANT refactorisation
+class OrderService 
+{
+    public function __construct() 
+    {
+        // ❌ Dépendances hardcodées - impossible à mocker
+        $this->emailService = new EmailService();
+        $this->paymentGateway = new PaymentGateway();
+    }
+}
+```
+
+### **Étape 2 : Tests échouent (normal)**
+```php
+// OrderServiceTest.php - Les tests échouent car :
+$this->emailService = $this->createMock(EmailService::class); // ❌ Classe concrète
+// Erreur : Class or interface "EmailServiceInterface" does not exist
+```
+
+### **Étape 3 : Refactorisation (votre travail)**
+```php
+// 1. Créer les interfaces
+interface EmailServiceInterface 
+{
+    public function sendEmail(array $emailData): void;
+}
+
+// 2. Modifier OrderService pour accepter les dépendances
+class OrderService 
+{
+    public function __construct(
+        EmailServiceInterface $emailService,  // ✅ Interface injectée
+        PaymentGatewayInterface $paymentGateway,
+        DatabaseInterface $database,
+        LoggerInterface $logger
+    ) {
+        $this->emailService = $emailService;
+        $this->paymentGateway = $paymentGateway;
+        $this->database = $database;
+        $this->logger = $logger;
+    }
+}
+```
+
+### **Étape 4 : Tests passent avec mocks (objectif final)**
+```php
+// OrderServiceTest.php - Les tests passent maintenant
+$this->emailService = $this->createMock(EmailServiceInterface::class); // ✅ Interface mockable
+$this->emailService->expects($this->once())->method('sendEmail');
+```
+
+## 🎯 **Pourquoi les mocks sont l'objectif :**
+
+1. **Testabilité** : Les mocks permettent d'isoler les tests
+2. **Flexibilité** : Changer d'implémentation sans modifier le code
+3. **Performance** : Tests rapides sans vraies dépendances
+4. **Fiabilité** : Tests déterministes et reproductibles
+
+## 📚 **Exemple concret :**
+
+### **AVANT (problématique) :**
+```php
+// Impossible de tester sans envoyer de vrais emails
+$orderService = new OrderService(); // Instancie de vraies classes
+$result = $orderService->processOrder($data); // Envoie de vrais emails !
+```
+
+### **APRÈS (objectif) :**
+```php
+// Tests isolés et rapides
+$mockEmail = $this->createMock(EmailServiceInterface::class);
+$mockEmail->expects($this->once())->method('sendEmail');
+
+$orderService = new OrderService($mockEmail, $mockPayment, $mockDb, $mockLogger);
+$result = $orderService->processOrder($data); // Aucun email envoyé !
+```
+
+## 🎯 **Résumé de la procédure :**
+
+1. **Départ** : Code avec dépendances hardcodées (non testable)
+2. **Objectif** : Code avec injection de dépendances (testable avec mocks)
+3. **Résultat** : Tests passent grâce aux mocks
+
+**Les mocks sont la RÉCOMPENSE du refactoring, pas quelque chose à éliminer !**
+
 ## 📚 Concepts à appliquer
 
 - **Dependency Injection** : Injecter les dépendances au lieu de les créer

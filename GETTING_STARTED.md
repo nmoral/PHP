@@ -108,6 +108,20 @@ coverage/                     # Rapports de couverture
 4. **Respectez les interfaces** : Les tests définissent les contrats
 5. **Documentez** : Commentez vos décisions architecturales
 
+## ⚠️ **IMPORTANT : Comprendre l'objectif des mocks**
+
+### **Les mocks sont l'OBJECTIF, pas quelque chose à éliminer !**
+
+- **Départ** : Code avec problèmes (dépendances hardcodées, God Classes)
+- **Objectif** : Code refactorisé et testable avec mocks
+- **Résultat** : Tests passent grâce aux mocks
+
+### **Pourquoi les mocks sont la récompense :**
+- ✅ **Tests isolés** : Pas d'effets de bord
+- ✅ **Tests rapides** : Pas de vraies dépendances
+- ✅ **Tests fiables** : Comportement déterministe
+- ✅ **Code flexible** : Changement d'implémentation facile
+
 ## 🆘 Aide
 
 - **Tests qui échouent** : Lisez les messages d'erreur attentivement

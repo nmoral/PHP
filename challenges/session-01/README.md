@@ -39,6 +39,107 @@ Créez les classes suivantes :
 
 **Objectif :** 100% des tests doivent passer avec une couverture de code > 90%.
 
+## 📋 Procédure détaillée pour les développeurs
+
+### ⚠️ **IMPORTANT : Les mocks sont l'OBJECTIF, pas quelque chose à éliminer !**
+
+### **Étape 1 : Code de départ (problématique)**
+```php
+// UserManager.php - AVANT refactorisation
+class UserManager 
+{
+    public function createUser(array $userData): array 
+    {
+        // ❌ Toutes les responsabilités dans une seule classe
+        // - Validation
+        // - Génération de mot de passe  
+        // - Sauvegarde en base
+        // - Envoi d'email
+        // - Logging
+    }
+}
+```
+
+### **Étape 2 : Tests échouent (normal)**
+```php
+// UserManagerTest.php - Les tests échouent car :
+$this->userValidator = $this->createMock(UserValidator::class); // ❌ Classe n'existe pas
+// Erreur : Class or interface "UserValidator" does not exist
+```
+
+### **Étape 3 : Refactorisation (votre travail)**
+```php
+// 1. Créer les classes spécialisées
+class UserValidator 
+{
+    public function validate(array $userData): bool { /* ... */ }
+}
+
+class EmailService 
+{
+    public function sendWelcomeEmail(string $email, string $name, string $password): void { /* ... */ }
+}
+
+// 2. Modifier UserManager pour utiliser l'injection
+class UserManager 
+{
+    public function __construct(
+        UserValidator $userValidator,     // ✅ Responsabilité séparée
+        EmailService $emailService,       // ✅ Responsabilité séparée
+        UserRepository $userRepository,   // ✅ Responsabilité séparée
+        Logger $logger,                   // ✅ Responsabilité séparée
+        PasswordGenerator $passwordGenerator // ✅ Responsabilité séparée
+    ) {
+        $this->userValidator = $userValidator;
+        $this->emailService = $emailService;
+        $this->userRepository = $userRepository;
+        $this->logger = $logger;
+        $this->passwordGenerator = $passwordGenerator;
+    }
+}
+```
+
+### **Étape 4 : Tests passent avec mocks (objectif final)**
+```php
+// UserManagerTest.php - Les tests passent maintenant
+$this->userValidator = $this->createMock(UserValidator::class); // ✅ Classe mockable
+$this->userValidator->expects($this->once())->method('validate');
+```
+
+## 🎯 **Pourquoi les mocks sont l'objectif :**
+
+1. **Testabilité** : Tester chaque classe indépendamment
+2. **Maintenabilité** : Chaque classe a une seule responsabilité
+3. **Flexibilité** : Changer d'implémentation sans impacter les autres
+4. **Réutilisabilité** : Classes réutilisables dans d'autres contextes
+
+## 📚 **Exemple concret :**
+
+### **AVANT (problématique) :**
+```php
+// Impossible de tester la validation sans toucher à la base de données
+$userManager = new UserManager(); // Fait tout
+$result = $userManager->createUser($data); // Valide + sauvegarde + envoie email !
+```
+
+### **APRÈS (objectif) :**
+```php
+// Tests isolés et rapides
+$mockValidator = $this->createMock(UserValidator::class);
+$mockValidator->expects($this->once())->method('validate');
+
+$userManager = new UserManager($mockValidator, $mockEmail, $mockRepo, $mockLogger, $mockPassword);
+$result = $userManager->createUser($data); // Seule la logique métier est testée !
+```
+
+## 🎯 **Résumé de la procédure :**
+
+1. **Départ** : Une classe qui fait tout (God Class)
+2. **Objectif** : Séparer en classes spécialisées (Single Responsibility)
+3. **Résultat** : Tests passent grâce aux mocks
+
+**Les mocks sont la RÉCOMPENSE du refactoring, pas quelque chose à éliminer !**
+
 ## 📚 Concepts à appliquer
 
 - **Single Responsibility Principle (SRP)** : Une classe = une responsabilité
